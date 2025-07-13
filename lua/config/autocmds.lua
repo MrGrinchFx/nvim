@@ -6,11 +6,16 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
-vim.api.nvim_create_autocmd('TermOpen', {
-  group = vim.api.nvim_create_augroup('custom-term-open', { clear = true }),
+vim.api.nvim_create_autocmd("TermOpen", {
+  group = vim.api.nvim_create_augroup("custom-term-open", { clear = true }),
   callback = function()
     vim.opt_local.number = false
     vim.opt_local.relativenumber = false
-    vim.cmd("startinsert")  -- optional: start in insert mode
+    vim.cmd("startinsert") -- optional: start in insert mode
   end,
+})
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.cuh",
+  command = "set filetype=cpp",
 })
