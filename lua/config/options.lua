@@ -3,3 +3,5 @@
 -- Add any additional options her
 -- e
 vim.g.colors_name = nil
+
+vim.g.snacks_animate = false
