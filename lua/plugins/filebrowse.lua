@@ -9,10 +9,10 @@ return {
     local opts = { noremap = true, silent = true, desc = "Telescope file browser" }
 
     -- Open file browser in current working directory
-    keymap("n", "<space>fb", ":Telescope file_browser<CR>", opts)
+    keymap("n", "<space>ff", ":Telescope file_browser<CR>", opts)
 
     -- Open file browser at current buffer's directory, select current file
-    keymap("n", "<space>fB", function()
+    keymap("n", "<space>fb", function()
       local path = vim.fn.expand("%:p:h")
       require("telescope").extensions.file_browser.file_browser({
         path = path,
