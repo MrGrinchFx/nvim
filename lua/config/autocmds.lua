@@ -19,3 +19,12 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "*.cuh",
   command = "set filetype=cpp",
 })
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.cuh", "*.cu" },
+  callback = function()
+    vim.bo.filetype = "cuda"
+  end,
+  desc = "Set filetype for CUDA files",
+})
+
+-- You can add other custom autocommands here as well.

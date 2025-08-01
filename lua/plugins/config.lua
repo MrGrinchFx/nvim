@@ -1,16 +1,11 @@
 return {
-  {
-    "ellisonleao/gruvbox.nvim",
-    priority = 1000,
-    opts = {
-      contrast = "hard",
-      transparent_mode = true,
-    },
+  "tiagovla/tokyodark.nvim",
+  opts = {
+    -- custom options here
+    transparent_background = true,
   },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "gruvbox",
-    },
-  },
+  config = function(_, opts)
+    require("tokyodark").setup(opts) -- calling setup is optional
+    vim.cmd([[colorscheme tokyodark]])
+  end,
 }
