@@ -16,7 +16,7 @@ return {
     trailing_stiffness_insert_mode = 0.7,
     damping = 0.8,
     damping_insert_mode = 0.8,
-    cterm_cursor_colors = { 255, 255, 255, 255 },
+    cterm_cursor_colors = { 150, 121, 105, 255 },
     cterm_bg = 255,
   },
 }
