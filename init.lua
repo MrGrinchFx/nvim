@@ -5,5 +5,5 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "*.cuh",
   command = "set filetype=cuda",
 })
-vim.o.background = "light" -- or "light" for light mode
-vim.cmd([[colorscheme ariake]])
+--vim.o.background = "light" -- or "light" for light mode
+vim.cmd([[colorscheme tokyonight-day]])
